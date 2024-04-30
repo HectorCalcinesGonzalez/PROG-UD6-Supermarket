@@ -5,6 +5,29 @@ import java.util.Stack;
 
 public class GestorCestas {
 
+    private static Cliente[] nombreClientes = {
+            new Cliente("Héctor"),
+            new Cliente("Kevin"),
+            new Cliente("Jose"),
+            new Cliente("Alonso"),
+            new Cliente("Marco"),
+            new Cliente("Adrián"),
+            new Cliente("Giova"),
+            new Cliente("Ramiro"),
+            new Cliente("Pepón"),
+            new Cliente("Alejandro"),
+            new Cliente("Messi"),
+            new Cliente("Mbappe"),
+            new Cliente("Jorge"),
+            new Cliente("Lucia"),
+            new Cliente("Carla"),
+            new Cliente("Pepe"),
+            new Cliente("Claudia"),
+            new Cliente("Sebastian"),
+            new Cliente("Ana"),
+            new Cliente("Oriana")
+    };
+
     private static Producto[] productosArray = {
             new Producto("Munchitos", 3.50f),
             new Producto("Clipper", 2.00f),
