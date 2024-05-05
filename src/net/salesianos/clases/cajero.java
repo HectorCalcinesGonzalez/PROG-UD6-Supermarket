@@ -7,11 +7,12 @@ import java.util.Random;
 public class Cajero {
     private int numeroCajero;
     private Queue<Cliente> colaCajero = new LinkedList<>();
+    private boolean cajeroAbierto = false;
 
-    public Cajero(int numeroCajero, Queue<Cliente> colaCajero) {
+    public Cajero(int numeroCajero, Queue<Cliente> colaCajero, boolean cajeroAbierto) {
         this.numeroCajero = numeroCajero;
         this.colaCajero = colaCajero;
-
+        this.cajeroAbierto = cajeroAbierto;
     }
 
     public int getNumeroCajero() {
@@ -30,6 +31,15 @@ public class Cajero {
         this.colaCajero = colaCajero;
     }
 
+    public void cajeroAbierto() {
+        if (cajeroAbierto = false) {
+            cajeroAbierto = true;
+            System.out.println("Se ha abierto el cajero");
+        } else if (cajeroAbierto = true) {
+            System.out.println("El cajero ya esta abierto!!");
+        }
+    }
+
     public void atenderCliente() {
         Cliente cliente = colaCajero.poll();
         if (cliente != null) {
@@ -44,6 +54,9 @@ public class Cajero {
     }
 
     public int getTotalClientesEnCola() {
+        if (cajeroAbierto = false) {
+            System.out.println("El cajero está cerrado!!");
+        }
         return colaCajero.size();
     }
 
@@ -54,5 +67,13 @@ public class Cajero {
 
     public String getNumero() {
         return String.valueOf(numeroCajero);
+    }
+
+    public boolean isCajeroAbierto() {
+        return cajeroAbierto;
+    }
+
+    public void setCajeroAbierto(boolean cajeroAbierto) {
+        this.cajeroAbierto = cajeroAbierto;
     }
 }
