@@ -52,4 +52,10 @@ public class GestorCestas {
         return new Cesta(stack);
     }
 
+    public static Cliente generarClienteAleatorio() {
+        Random random = new Random();
+        int index = random.nextInt(nombreClientes.length);
+        return nombreClientes[index];
+    }
+
 }
